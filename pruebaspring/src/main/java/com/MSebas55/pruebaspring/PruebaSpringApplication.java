@@ -1,13 +1,13 @@
-package com.MSebas55.PrimerEj;
+package com.MSebas55.pruebaspring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PrimerEjApplication {
+public class PruebaSpringApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PrimerEjApplication.class, args);
+		SpringApplication.run(PruebaSpringApplication.class, args);
 	}
 
 }

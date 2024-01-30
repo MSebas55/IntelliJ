@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.MSebas55</groupId>
-	<artifactId>PrimerEj</artifactId>
+	<artifactId>pruebaspring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Primer Ej</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Prueba Spring</name>
+	<description>Prueba de Spring</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -32,6 +32,11 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -43,6 +48,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

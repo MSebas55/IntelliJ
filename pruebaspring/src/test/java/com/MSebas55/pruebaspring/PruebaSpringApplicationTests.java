@@ -1,10 +1,10 @@
-package com.MSebas55.PrimerEj;
+package com.MSebas55.pruebaspring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PrimerEjApplicationTests {
+class PruebaSpringApplicationTests {
 
 	@Test
 	void contextLoads() {
