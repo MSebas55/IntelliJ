@@ -28,6 +28,10 @@ public class ProductController {
     public Product saveProduct(@RequestBody Product product) {
         return productService.saveProduct(product);
     }
+    @PutMapping("/update")
+    public Product updateProduct(@RequestBody Product product) {
+        return productService.saveProduct(product);
+    }
 
     @GetMapping("/allNames")
     public List<String> getAllProductNames() {
@@ -56,12 +60,17 @@ public class ProductController {
     public List<Product> getProductsLike(@PathVariable String cad) {
         List<Product> allProducts = productService.getAllProducts();
         List<Product> returnProducts = new ArrayList<Product>();
+        cad = cad.toUpperCase();
 
         for (Product product: allProducts) {
-            if (product.getName().contains(cad)) {
+            if (product.getName().toUpperCase().contains(cad)) {
                 returnProducts.add(product);
             }
         }
         return returnProducts;
+    }
+    @DeleteMapping("/delete/{id}")
+    public Boolean deleteProduct(@PathVariable Integer id) {
+        return productService.deleteProduct(id);
     }
 }
