@@ -18,4 +18,7 @@ public class ProductService {
     public Product getProductById(Integer id) {
         return productRepository.findById(id).get();
     }
+    public Product saveProduct(Product product) {
+        return productRepository.save(product);
+    }
 }
